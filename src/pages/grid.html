@@ -1,0 +1,113 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 15% 70% 15%;
+            grid-template-rows: 10% 80% 10%;
+        }
+        .header {
+            background-color: aliceblue;
+            grid-column: 1 / 4;
+            grid-row: 1 / 2;
+        }
+        .leftmenu {
+            background-color: aqua;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+        .main {
+            background-color: aquamarine;
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        .rightmenu {
+            background-color: beige;
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+        .footer {
+            background-color: blueviolet;
+            grid-column: 1 / 4;
+            grid-row: 3 / 4;
+        }
+    </style>
+</head>
+<body>
+    <section class="parent">
+        <header class="header">Header</header>
+        <aside class="leftmenu">Left Menu</aside>
+        <main class="main">Main</main>
+        <aside class="rightmenu">Right Menu</aside>
+        <footer class="footer">Footer</footer>
+    </section>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            display: grid;
+            grid-template-areas:
+                'header header header'
+                'nav article article'
+                'nav ads ads'
+                'footer footer footer';
+            grid-template-columns: 1fr 3fr 3fr;
+            grid-template-rows: auto 1fr auto auto;
+            height: 100vh;
+            gap: 10px;
+        }
+        .header {
+            grid-area: header;
+            background-color: #008000; /* Thick green */
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .nav {
+            grid-area: nav;
+            background-color: #008000; /* Thick green */
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .article {
+            grid-area: article;
+            background-color: #008000; /* Thick green */
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .ads {
+            grid-area: ads;
+            background-color: #008000; /* Thick green */
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .footer {
+            grid-area: footer;
+            background-color: #008000; /* Thick green */
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <section class="parent">
+        <div class="header">Header</div>
+        <div class="nav">Nav</div>
+        <div class="article">Article</div>
+        <div class="ads">Ads</div>
+        <div class="footer">Footer</div>
+    </section>
+</body>
+</html>
+
+
